@@ -1,0 +1,244 @@
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  font-family: $main-font;
+}
+
+.wrapper {
+  padding-top: 61px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  @include media("max", "mdd") {
+    padding-top: 13px;
+  }
+}
+
+[class*="__container"] {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+
+  @include media("max", "lg") {
+    padding: 0 24px;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.content__title {
+  font-family: $title-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 51px;
+  color: #10375C;
+
+  @include media("max", "lg") {
+    font-size: 32px;
+  }
+  @include media("max", "md") {
+    font-size: 24px;
+    line-height: 40px;
+  }
+}
+
+.section__title {
+  margin-bottom: 8px;
+  display: inline-block;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #222831;
+
+  .line {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+    height: 2px;
+    width: 73px;
+    background: #000;
+
+    @include media("max", "md") {
+      height: 1px;
+      width: 50px;
+    }
+  }
+
+  @include media("max", "md") {
+    font-size: 16px;
+  }
+}
+
+
+.custom-swiper-nav {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: flex-end;
+  
+  @include media("max", "md") {
+    display: none;
+  }
+
+  .custom-swiper-button-next {
+
+    cursor: pointer;
+    position: relative;
+    width: fit-content;
+    height: 50px;
+
+    div {
+      position: relative;
+      border-radius: 10px;
+      top: 39px;
+      width: 50px;
+      height: 4px;
+      background: #9A9A9A;
+      left: -3px;
+      display: block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        border-radius: 10px;
+        width: 17px;
+        height: 4px;
+        top: -6px;
+        right: -3px;
+        background: #9A9A9A;
+        transform: rotate(50deg);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-radius: 10px;
+        width: 17px;
+        height: 4px;
+        top: 6px;
+        right: -3px;
+        background: #9A9A9A;
+        transform: rotate(-50deg);
+      }
+    }
+  }
+
+
+
+  .custom-swiper-button-prev {
+
+    cursor: pointer;
+    position: relative;
+    width: fit-content;
+    height: 50px;
+    margin-right: 23px;
+
+    div {
+      position: relative;
+      border-radius: 10px;
+      top: 39px;
+      width: 50px;
+      height: 4px;
+      background: #9A9A9A;
+      left: 0;
+      display: block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        border-radius: 10px;
+        width: 17px;
+        height: 4px;
+        top: -6px;
+        left: -1px;
+        background: #9A9A9A;
+        transform: rotate(-50deg);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-radius: 10px;
+        width: 17px;
+        height: 4px;
+        top: 6px;
+        left: -1px;
+        background: #9A9A9A;
+        transform: rotate(50deg);
+      }
+    }
+  }
+}
+
+
+.custom-swiper-button-prev:focus, 
+.custom-swiper-button-next:focus
+  {
+
+  div {
+    width: 89px;
+    background: #FF5722;
+
+    &::after, &::before {
+      background: #FF5722;
+    }
+  }
+}
+
+
+.btn-more {
+  font-family: $main-font;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: #FF5722;
+  margin: auto;
+
+  .arrow-block {
+    position: relative;
+    margin-left: 8px;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    width: 32px;
+
+    .arrow-left {
+      position: absolute;
+      background: #FF5722;
+      left: 10px;
+      top: -3px;
+      width: 10px;
+      height: 2px;
+      display: block;
+      transform: rotate(45deg);
+      float: right;
+      border-radius: 2px;
+    }
+    .arrow-right {
+      position: absolute;
+      display: block;
+      background: #FF5722;
+      left: 10px;
+      top: 3px;
+      width: 10px;
+      height: 2px;
+      transform: rotate(-45deg);
+      float: right;
+      border-radius: 2px;
+    }
+  }
+}
