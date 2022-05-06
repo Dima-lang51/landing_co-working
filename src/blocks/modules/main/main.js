@@ -65,7 +65,7 @@ for (let i = 0; i < facilitiesBtns.length; i++){
         facilitiesBtns[j].classList.remove("active");
       }
       this.classList.add("active");
-      facilitiesImage.src = "/img/facilities/"+ this.id + ".png";
+      facilitiesImage.src = "img/facilities/"+ this.id + ".png";
     }
   )
 
